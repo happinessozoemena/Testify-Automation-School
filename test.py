@@ -14,6 +14,12 @@ class TestMain(unittest.TestCase):
     self.assertEqual(main.Subtraction(10,5),5, "Should be 5")
 
 
+    def test_multiplication(self):
+      self.assertEqual(main.Multiplication(2,2),4, "Should be 4")    
+
+      
+
+
     if _name_ =='_main_':
         unittest.main( )
     
