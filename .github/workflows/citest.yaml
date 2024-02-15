@@ -6,7 +6,7 @@ Test:
   steps:
     - uses: actions/checkout@v2
     - run: echo "this job automatically triggered by ${{ github.event_name}} event"
-    - run: npm start
+    - run: Module.3
 
     messageSlack:
       runs-on: ubuntu-latest
@@ -15,6 +15,6 @@ Test:
          uses: rtCamp/action-slack-notify@v2
          env:
          SLACK_CHANNEL: task-review
-         SLACK_TITLE: Happiness-CI
-         SLACK_WEBHOOK: ${{ secret.SLACK_WEBHOOK_URL }}
+         SLACK_TITLE: Happiness-CI/CD  
+         SLACK_WEBHOOK: ${{secret.SLACK_WEBHOOK_UR }}
          status: ${{ job.status }}
