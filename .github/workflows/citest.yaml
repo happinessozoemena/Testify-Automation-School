@@ -6,7 +6,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v2
       - run: echo "This job automatically triggered by ${{ github.event_name }} event"
-      - run: npm start
+      - run: npm test
 
   messageSlack: 
     runs-on: ubuntu-latest

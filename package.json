@@ -1,0 +1,11 @@
+{
+  "name": "testify-automation-school",
+  "version": "1.0.0",
+  "description": "CI/CD Pipeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "node Module.3/Task6.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
