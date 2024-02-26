@@ -16,5 +16,5 @@ Test:
          env:
          SLACK_CHANNEL: task-review
          SLACK_TITLE: Happiness-CI/CD  
-         SLACK_WEBHOOK: ${{secret.SLACK_WEBHOOK_UR }}
+         SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK_UR }}
          status: ${{ job.status }}
