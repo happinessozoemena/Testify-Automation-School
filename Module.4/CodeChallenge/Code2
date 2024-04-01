@@ -1,0 +1,29 @@
+public class Code2 {
+    public static void main(String[] args) {
+        String input = "I am the best Automation Tester";
+        String reversed = reverseWords(input);
+        System.out.println(reversed);
+    }
+
+    public static String reverseWords(String sentence) {
+        // Base case: if the sentence is empty or null
+        if (sentence == null || sentence.isEmpty()) {
+            return sentence;
+        }
+
+        // Find the index of the first space
+        int spaceIndex = sentence.indexOf(' ');
+
+        // Base case: if there's no space left, return the sentence itself
+        if (spaceIndex == -1) {
+            return sentence;
+        }
+
+        // Extract the first word and the rest of the sentence
+        String firstWord = sentence.substring(0, spaceIndex);
+        String restOfSentence = sentence.substring(spaceIndex + 1);
+
+    
+        return reverseWords(restOfSentence) + " " + firstWord;
+    }
+}
