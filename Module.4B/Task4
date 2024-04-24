@@ -1,0 +1,27 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Task4 {
+    public static void main(String[] args)throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\IdeaProjects\\selenium3\\src\\chromedriver.exe");
+        //launches browser
+        WebDriver driver = new ChromeDriver();
+        //maximize the browser
+        driver.manage().window().maximize();
+
+        //navigates to the url
+        driver.get("http://demo.guru99.com/");
+        Thread.sleep(5000);
+        //locate the "security project" button and click
+        driver.findElement(By.linkText("Security Project")).click();
+        Thread.sleep(5000);
+        
+        //input name
+        driver.findElement(By.name("kuc")).sendKeys("Happy");
+        Thread.sleep(5000);
+        //input password
+        driver.findElement(By.name("password")).sendKeys("Happy");
+
+    }
+}
