@@ -9,7 +9,6 @@ def count_vowels(input_string):
     return count
 
 if __name__ == "__main__":
-
     sample_string = "Hello, World!"
     num_vowels = count_vowels(sample_string)
     print(f"The number of vowels in '{sample_string}' is: {num_vowels}")

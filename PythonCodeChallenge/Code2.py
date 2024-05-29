@@ -23,9 +23,7 @@ def convert_length(value, from_unit, to_unit):
 
     return converted_value
 
-
 if __name__ == "__main__":
-    # Example usage
     value = 100
     from_unit = 'meters'
     to_unit = 'kilometers'
