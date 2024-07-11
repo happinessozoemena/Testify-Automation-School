@@ -1,0 +1,35 @@
+import java.util.Arrays;
+
+public class Code6 {
+    public static void main(String[] args) {
+        String str1 = "Despite commuting at the peek hour, she was able to keep to time";
+        String str2 = "Despite commuting at the peek hour, she was able to keep to time";
+
+        if (areAnagrams(str1, str2)) {
+            System.out.println("The two strings are anagrams.");
+        } else {
+            System.out.println("The two strings are not anagrams.");
+        }
+    }
+
+    public static boolean areAnagrams(String str1, String str2) {
+        // Removing spaces and converting to lower case for comparison
+        str1 = str1.replaceAll("\\s", "").toLowerCase();
+        str2 = str2.replaceAll("\\s", "").toLowerCase();
+
+        // If lengths are not equal, they cannot be anagrams
+        if (str1.length() != str2.length())
+            return false;
+
+        // Convert strings to character arrays
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+
+        // Sort the character arrays
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        // Compare sorted arrays
+        return Arrays.equals(charArray1, charArray2);
+    }
+}

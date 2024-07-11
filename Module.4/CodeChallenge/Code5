@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class Code5 {
+    public static void main(String[] args) {
+        String[] input = {"akka", "akak", "baab", "baba", "bbaa"};
+        Map<String, List<String>> anagramBuckets = createAnagramBuckets(input);
+        printAnagramBuckets(anagramBuckets);
+    }
+
+    public static Map<String, List<String>> createAnagramBuckets(String[] input) {
+        Map<String, List<String>> anagramBuckets = new HashMap<>();
+
+        for (String word : input) {
+            char[] chars = word.toCharArray();
+            Arrays.sort(chars);
+            String sortedWord = new String(chars);
+
+            if (!anagramBuckets.containsKey(sortedWord)) {
+                anagramBuckets.put(sortedWord, new ArrayList<>());
+            }
+            anagramBuckets.get(sortedWord).add(word);
+        }
+
+        return anagramBuckets;
+    }
+
+    public static void printAnagramBuckets(Map<String, List<String>> anagramBuckets) {
+        for (List<String> bucket : anagramBuckets.values()) {
+            if (bucket.size() > 1) {
+                System.out.println("Anagram Bucket:");
+                for (String word : bucket) {
+                    System.out.println(word);
+                }
+                System.out.println();
+            }
+        }
+    }
+}
